@@ -44,3 +44,5 @@ app.get('/login', (req, res) => {
 app.listen(PORT, () => {
   console.log('SERVIDOR CORRIENDO EN EL PUERTO 3000');
 });
+
+let variable;
