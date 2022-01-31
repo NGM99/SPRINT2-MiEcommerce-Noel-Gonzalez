@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Colores */
+:root {
+  --color-blanco: rgba(255, 255, 255, 1);
+  --color-gris: rgba(153, 153, 153, 1);
+  --color-gris-oscuro: rgba(73, 79, 81, 1);
+  --color-aqua: rgba(12, 176, 147, 1);
+  --color-negro: rgba(0, 0, 0, 1);
+  --color-rojo: rgba(255, 0, 0, 1);
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+html {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+}
