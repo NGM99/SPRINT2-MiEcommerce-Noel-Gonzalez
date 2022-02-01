@@ -9,6 +9,35 @@
     <title>Login</title>
   </head>
   <body>
+    <header class="header-container">
+      <img src="MiEcommerce.png" alt="" class="logo" />
+    </header>
+    <main class="main-container">
+      <div class="background-login-aqua">
+        <div class="component-login">
+          <div class="form">
+            <p class="text-hola">¡Hola!</p>
+            <form action="" class="form-inputs">
+              <input
+                type="text"
+                class="username-input"
+                placeholder="Tu nombre de usuario"
+              />
+              <input
+                type="password"
+                class="user-password"
+                placeholder="Tu contraseña"
+              />
+              <button class="button-login">Iniciar Sesión</button>
+            </form>
+          </div>
+          <div class="text-no-cuenta">
+            <p class="tienes-cuenta">No tienes cuenta?</p>
+            <a href="#" class="text-registrate">Registrate</a>
+          </div>
+        </div>
+      </div>
+    </main>
     <%- include('../partials/footer.ejs') %>
   </body>
 </html>
