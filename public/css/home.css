@@ -1,0 +1,125 @@
+.titulo1 {
+  padding-top: 48px;
+  padding-bottom: 8px;
+  width: 100%;
+  display: flex;
+  /* text-align: left; */
+  justify-content: center;
+}
+
+.titulo2 {
+  padding-top: 12px;
+  padding-bottom: 8px;
+  width: 100%;
+  display: flex;
+  /* text-align: left; */
+  justify-content: center;
+}
+
+.contenedor-productos {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contenedor-producto {
+  max-width: 244px;
+  height: 320px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 16px;
+  padding: 8px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.producto-img {
+  border-radius: 8px;
+  width: 228px;
+  height: 240px;
+}
+
+.etiqueta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nombre {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+  width: 140px;
+  line-height: 20px;
+}
+
+.contenedor-puntos {
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+  padding-left: 8px;
+}
+
+.puntos {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+  width: 72px;
+}
+
+.leyenda {
+  margin-top: 8px;
+  font-size: 8px;
+  font-weight: light;
+  color: rgba(0, 0, 0, 1);
+}
+
+/* Estilos anuncios */
+
+.contenedor-anuncios {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  border-radius: 16px;
+}
+
+.anuncio {
+  position: relative;
+  height: 264px;
+}
+
+.anuncio-img-1 {
+  width: 504px;
+  height: 256px;
+  border-radius: 16px;
+}
+
+.anuncio-img-2 {
+  width: 112px;
+  height: 112px;
+  border-radius: 8px;
+}
+
+.contenedor-info {
+  position: relative;
+  display: flex;
+  width: 504px;
+  height: 128;
+  align-items: center;
+  top: -120px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  border-radius: 16px;
+}
+
+.info {
+  color: #ffffff;
+  height: 88px;
+  bottom: 24px;
+  font-style: normal;
+  border-radius: 0px 0px 16px 16px;
+  padding-left: 16px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 70px;
+}

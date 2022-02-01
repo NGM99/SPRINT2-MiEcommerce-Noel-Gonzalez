@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/register.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Registro</title>
+
+    <link rel="stylesheet" href="/css/register.css" />
+  </head>
+  <body>
+    <header>
+      <img src="MiEcommerce.svg" alt="Logotipo" class="logo" />
+    </header>
+
+    <div class="rectangulo"></div>
+    <form action="/register" method="POST" class="formulario">
+      <div class="contenedorform">
+        <p class="saludo">¡Registrate!</p>
+        <input type="email" name="email" id="email" placeholder="Tu email" />
+        <input
+          type="password"
+          name="contraseña"
+          id="contra"
+          placeholder="Tu nueva contraseña"
+        />
+        <input
+          type="password"
+          name="contraseñaconfirmacion"
+          id="contraconfirmacion"
+          placeholder="Repite tu contraseña"
+        />
+
+        <button type="submit" class="boton">Crear Cuenta</button>
+      </div>
+    </form>
+
+    <div class="registrate">
+      <p>¿Ya tienes cuenta? <a href="/login"> Inicia Sesion</a></p>
+    </div>
+    <%- include("../partials/footer")%>
+  </body>
+</html>
