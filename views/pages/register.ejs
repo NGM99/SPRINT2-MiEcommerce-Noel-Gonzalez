@@ -3,43 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/register.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>Registro</title>
-
-    <link rel="stylesheet" href="/css/register.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/footer-abajo.css" />
+    <title>Login</title>
   </head>
   <body>
-    <header>
-      <img src="MiEcommerce.svg" alt="Logotipo" class="logo" />
+    <header class="header-container">
+      <img src="MiEcommerce.png" alt="" class="logo" />
     </header>
-
-    <div class="rectangulo"></div>
-    <form action="/register" method="POST" class="formulario">
-      <div class="contenedorform">
-        <p class="saludo">¡Registrate!</p>
-        <input type="email" name="email" id="email" placeholder="Tu email" />
-        <input
-          type="password"
-          name="contraseña"
-          id="contra"
-          placeholder="Tu nueva contraseña"
-        />
-        <input
-          type="password"
-          name="contraseñaconfirmacion"
-          id="contraconfirmacion"
-          placeholder="Repite tu contraseña"
-        />
-
-        <button type="submit" class="boton">Crear Cuenta</button>
+    <main class="main-container">
+      <div class="background-login-aqua">
+        <div class="component-login">
+          <div class="form">
+            <p class="text-hola">¡Registrate!</p>
+            <form action="" class="form-inputs">
+              <input
+                type="text"
+                class="username-input"
+                placeholder="Tu email"
+              />
+              <input
+                type="password"
+                class="user-password"
+                placeholder="Tu nueva contraseña"
+              />
+              <input
+                type="password"
+                class="user-password"
+                placeholder="Repite tu contraseña"
+              />
+              <button class="button-register">Iniciar Sesión</button>
+            </form>
+          </div>
+          <div class="text-no-cuenta">
+            <p class="tienes-cuenta">¿No tienes cuenta?</p>
+            <a href="#" class="text-login">Inicia Sesión</a>
+          </div>
+        </div>
       </div>
-    </form>
-
-    <div class="registrate">
-      <p>¿Ya tienes cuenta? <a href="/login"> Inicia Sesion</a></p>
-    </div>
-    <%- include("../partials/footer")%>
+    </main>
+    <%- include('../partials/footer.ejs') %>
   </body>
 </html>
