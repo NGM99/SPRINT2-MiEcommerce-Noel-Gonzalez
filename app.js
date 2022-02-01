@@ -20,6 +20,10 @@ app.get("/", (req, res) => {
 app.get("/products", (req, res) => {
   res.render("product");
 });
+// PRODUCT/:ID
+app.get("/products/id", (req, res) => {
+  res.render("product");
+});
 
 // CART
 app.get("/cart", (req, res) => {
