@@ -111,7 +111,7 @@ header {
 /* Estilos productos */
 
 .titulo1 {
-  padding-top: 48px;
+  padding-top: 80px;
   padding-bottom: 8px;
   width: 100%;
   /* display: flex; */
@@ -198,25 +198,42 @@ header {
   border-radius: 16px;
 }
 
+.primer-anuncio {
+  background-image: url("/assets/disneybg.jpg");
+  background-size: cover;
+}
+
+.segundo-anuncio {
+  background-image: url("/assets/hbobg.jpg");
+  background-size: cover;
+}
+
 .anuncio {
   position: relative;
   height: 264px;
+  width: 500px;
+  border-radius: 16px;
+  /* background-image: url("/assets/disneybg.jpg");
+  background-size: cover; */
 }
 
 .anuncio-img-1 {
   width: 504px;
   height: 256px;
   border-radius: 16px;
+
+  position: absolute;
 }
 
 .anuncio-img-2 {
   width: 112px;
   height: 112px;
   border-radius: 8px;
+  position: absolute;
 }
 
 .contenedor-info {
-  position: relative;
+  position: absolute;
   display: flex;
   width: 504px;
   height: 128;
@@ -253,6 +270,7 @@ header {
   height: 128px;
   background: black;
   width: 1024px;
+  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -296,4 +314,69 @@ ul {
   position: absolute;
   z-index: -1;
   top: 336px;
+}
+
+.anuncios-container {
+  margin-top: 70px;
+  height: 320px;
+  width: 100%;
+  background-color: rgba(12, 176, 147, 1);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.disney {
+  background-image: url("/assets/disneybg.jpg");
+}
+
+.hbo {
+  background-image: url("/assets/hbobg.jpg");
+}
+
+.televisoras-container {
+  bottom: 80px;
+  height: 264px;
+  width: 500px;
+  background-size: cover;
+  border-radius: 18px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.anuncios-container-televisoras {
+  display: flex;
+  gap: 20px;
+  top: 50px;
+  position: absolute;
+}
+
+.container-info {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+  border-radius: 18px;
+  width: 100%;
+}
+
+.brand {
+  width: 100px;
+  border-radius: 8px;
+}
+
+.info-container {
+  margin-left: 15px;
+}
+
+.text-info {
+  color: white;
+  font-size: 16px;
+}
+
+.text-info-bold {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
 }
