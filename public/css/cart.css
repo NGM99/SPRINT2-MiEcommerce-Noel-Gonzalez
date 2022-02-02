@@ -151,3 +151,18 @@ h3 {
   cursor: pointer;
   margin: 15px 0 0 0;
 }
+
+.form-promocion {
+  margin-top: 10px;
+}
+
+.input-promocion {
+  padding: 8px;
+}
+
+.button-promocion {
+  padding: 8px;
+  background-color: black;
+  color: white;
+  border: white 1px solid;
+}
