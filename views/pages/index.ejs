@@ -6,18 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/home.css" />
-    <link rel="stylesheet" href="/css/header.css" />
     <script
       src="https://kit.fontawesome.com/4070a3aa63.js"
       crossorigin="anonymous"
     ></script>
     <title>home</title>
     <link rel="stylesheet" href="/css/home.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+
     <title>Document</title>
   </head>
 
   <body>
     <%- include("../partials/header")%>
+    <!-- Menu -->
+    <%- include("../partials/menu")%>
+
+    <div class="decoracion"></div>
+
     <main>
       <!-- Anuncios -->
       <div class="contenedor-anuncios">
@@ -118,10 +127,11 @@
             </div>
           </div>
         </div>
+      </div>
 
+      <div class="contenedor-productos">
         <!-- Segundo contenedor de productos -->
         <h3 class="titulo2">Los más pedidos</h3>
-
         <div class="contenedor-producto">
           <img
             src="/assets/images (1).jpeg"
@@ -131,7 +141,7 @@
           <div class="etiqueta">
             <p class="nombre">Coca Cola Lata 220mL Pack Original x8</p>
             <div class="contenedor-puntos">
-              <p class="puntos">760</p>
+              <p class="puntos">720</p>
               <p class="leyenda">PUNTOS</p>
             </div>
           </div>
@@ -189,9 +199,9 @@
             class="producto-img"
           />
           <div class="etiqueta">
-            <p class="nombre">NOMBRE DEL PRODUCTO O SERVICIO</p>
+            <p class="nombre">Whiskey Jack Daniels Honey 750ml</p>
             <div class="contenedor-puntos">
-              <p class="puntos">XX.XXX</p>
+              <p class="puntos">19.900</p>
               <p class="leyenda">PUNTOS</p>
             </div>
           </div>
@@ -243,6 +253,6 @@
         </div>
       </div>
     </main>
-    <%- include("../partials/footer")%>
+    <%- include("../partials/menu")%> <%- include("../partials/footer")%>
   </body>
 </html>
