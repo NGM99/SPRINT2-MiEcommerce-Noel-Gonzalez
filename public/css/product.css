@@ -168,3 +168,35 @@
   font-weight: light;
   color: rgba(0, 0, 0, 1);
 }
+
+.categorias {
+  height: 128px;
+  margin-top: 30px;
+  width: 100%;
+  background-color: #333333;
+  border-radius: 8px;
+  display: flex;
+  padding: 15px 0;
+}
+
+.image-category {
+  height: 50px;
+}
+
+.category-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 12.5%;
+  align-items: center;
+  border-right: 2px white solid;
+}
+
+.last {
+  border-right: 0px none solid;
+}
+
+.text-categories {
+  color: white;
+  font-size: 14px;
+}
