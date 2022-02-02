@@ -7,15 +7,42 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/product.css" />
     <link rel="stylesheet" href="/css/header.css" />
+    <script
+      src="https://kit.fontawesome.com/4070a3aa63.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Producto</title>
   </head>
   <body>
-    <%- include("../partials/header")%>
+    <header>
+      <!-- logo -->
+      <img id="logoEcommerce" src="/MiEcommerce.svg" alt="logo" />
+      <!-- search bar -->
+      <form class="search" action="#">
+        <input type="text" placeholder="Buscar productos..." name="search" />
+        <button type="button" class="magnifying">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <!-- cart button -->
+      <button type="button" class="cartButton">
+        <i class="fas fa-shopping-cart"></i>
+      </button>
+      <!-- button olivia -->
+      <button type="button" class="buttons">
+        <div class="buttonElements">
+          <div>
+            <img class="profilePic" src="/ProfilePic.png" alt="Olivia" />
+          </div>
+          <div class="alignname"><p>Olivia</p></div>
+        </div>
+      </button>
+    </header>
     <main class="main-container">
       <div class="container">
         <section class="container-root">
           <img src="/arrow-left.svg" alt="" class="container-arrow" />
-          <a class="container-volver" href="#">Volver</a>
+          <a class="container-volver" href="/">Volver</a>
           <img src="/chevron-right.svg" alt="" class="container-arrow" />
           <a class="container-volver" href="#">Alimentos</a>
         </section>
@@ -42,7 +69,12 @@
               <p class="text-puntos">19.000</p>
               <p class="subtitle-puntos">PUNTOS</p>
             </div>
-            <button class="button-add-to-cart">Agregar al Carrito</button>
+            <button
+              class="button-add-to-cart"
+              onclick="location.href='cart.ejs'"
+            >
+              Agregar al Carrito
+            </button>
             <p class="text-product-info">
               Un verdaderamente fabuloso licor de whiskey Jack Daniels. Está
               hecho con una mezcla de ricas especias y suave, miel tersa y el
