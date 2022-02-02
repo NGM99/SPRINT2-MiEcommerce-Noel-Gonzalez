@@ -14,54 +14,39 @@
     <title>Producto</title>
   </head>
   <body>
-    <header>
-      <!-- logo -->
-      <img id="logoEcommerce" src="/MiEcommerce.svg" alt="logo" />
-      <!-- search bar -->
-      <form class="search" action="#">
-        <input type="text" placeholder="Buscar productos..." name="search" />
-        <button type="button" class="magnifying">
-          <i class="fas fa-search"></i>
-        </button>
-      </form>
-      <!-- cart button -->
-      <button type="button" class="cartButton">
-        <i class="fas fa-shopping-cart"></i>
-      </button>
-      <!-- button olivia -->
-      <button type="button" class="buttons">
-        <div class="buttonElements">
-          <div>
-            <img class="profilePic" src="/ProfilePic.png" alt="Olivia" />
-          </div>
-          <div class="alignname"><p>Olivia</p></div>
-        </div>
-      </button>
-    </header>
+    <%- include("../partials/header")%>
     <main class="main-container">
       <div class="container">
         <section class="container-root">
-          <img src="/arrow-left.svg" alt="" class="container-arrow" />
+          <img src="/assets/arrow-left.svg" alt="" class="container-arrow" />
           <a class="container-volver" href="/">Volver</a>
-          <img src="/chevron-right.svg" alt="" class="container-arrow" />
+          <img src="/assets/chevron-right.svg" alt="" class="container-arrow" />
           <a class="container-volver" href="#">Alimentos</a>
         </section>
         <section class="container-producto-detalle">
           <div class="flow-images">
             <img
-              src="/D_NQ_NP_717087-MLA41598235072_042020-O.webp"
+              src="/assets/D_NQ_NP_717087-MLA41598235072_042020-O.webp"
               alt=""
               class="foto-detalle-flow"
             />
-            <img src="/images (2).jpeg" alt="" class="foto-detalle-flow" />
             <img
-              src="/D_NQ_NP_705560-MLA44741701921_012021-O.webp"
+              src="/assets/images (2).jpeg"
+              alt=""
+              class="foto-detalle-flow"
+            />
+            <img
+              src="/assets/D_NQ_NP_705560-MLA44741701921_012021-O.webp"
               alt=""
               class="foto-detalle-flow"
             />
           </div>
           <div class="foto-demostracion">
-            <img src="/images (2).jpeg" alt="" class="foto-detalle-xlsize" />
+            <img
+              src="/assets/images (2).jpeg"
+              alt=""
+              class="foto-detalle-xlsize"
+            />
           </div>
           <div class="product-info">
             <p class="title-product">Whiskey Jack Daniels Honey 750ml</p>
@@ -69,12 +54,9 @@
               <p class="text-puntos">19.000</p>
               <p class="subtitle-puntos">PUNTOS</p>
             </div>
-            <button
-              class="button-add-to-cart"
-              onclick="location.href='cart.ejs'"
-            >
-              Agregar al Carrito
-            </button>
+            <div class="button-add-to-cart">
+              <a class="to-cart" href="/cart"> Agregar al Carrito </a>
+            </div>
             <p class="text-product-info">
               Un verdaderamente fabuloso licor de whiskey Jack Daniels. Está
               hecho con una mezcla de ricas especias y suave, miel tersa y el
@@ -102,7 +84,7 @@
         <section class="lista-productos">
           <div class="contenedor-producto">
             <img
-              src="/images (1).jpeg"
+              src="/assets/images (1).jpeg"
               alt="whiskey jack"
               class="producto-img"
             />
@@ -117,7 +99,7 @@
 
           <div class="contenedor-producto">
             <img
-              src="/images (1).jpeg"
+              src="/assets/images (1).jpeg"
               alt="whiskey jack"
               class="producto-img"
             />
@@ -132,7 +114,7 @@
 
           <div class="contenedor-producto">
             <img
-              src="/images (1).jpeg"
+              src="/assets/images (1).jpeg"
               alt="whiskey jack"
               class="producto-img"
             />
@@ -147,7 +129,7 @@
 
           <div class="contenedor-producto">
             <img
-              src="/images (1).jpeg"
+              src="/assets/images (1).jpeg"
               alt="whiskey jack"
               class="producto-img"
             />
@@ -163,43 +145,63 @@
         <section class="bonus">
           <div class="categorias">
             <div class="category-content">
-              <img src="/tablet-cellphone.svg" alt="" class="image-category" />
+              <img
+                src="/assets/tablet-cellphone.svg"
+                alt=""
+                class="image-category"
+              />
               <p class="text-categories">Eléctronica</p>
             </div>
             <div class="category-content">
               <img
-                src="/hamburger.svg"
+                src="/assets/hamburger.svg"
                 alt="tshirt-crew"
                 class="image-category"
               />
               <p class="text-categories">Alimentos</p>
             </div>
             <div class="category-content">
-              <img src="/glass-mug-variant.svg" alt="" class="image-category" />
+              <img
+                src="/assets/glass-mug-variant.svg"
+                alt=""
+                class="image-category"
+              />
               <p class="text-categories">Bebidas</p>
             </div>
             <div class="category-content">
-              <img src="/tshirt-crew.svg" alt="" class="image-category" />
-              <p class="text-categories">Juegos</p>
-            </div>
-            <div class="category-content">
               <img
-                src="/controller-classic.svg"
+                src="/assets/tshirt-crew.svg"
                 alt=""
                 class="image-category"
               />
               <p class="text-categories">Juegos</p>
             </div>
             <div class="category-content">
-              <img src="/steering.svg" alt="" class="image-category" />
+              <img
+                src="/assets/controller-classic.svg"
+                alt=""
+                class="image-category"
+              />
+              <p class="text-categories">Juegos</p>
+            </div>
+            <div class="category-content">
+              <img src="/assets/steering.svg" alt="" class="image-category" />
               <p class="text-categories">Automotor</p>
             </div>
             <div class="category-content">
-              <img src="/sofa-single.svg" alt="" class="image-category" />
+              <img
+                src="/assets/sofa-single.svg"
+                alt=""
+                class="image-category"
+              />
               <p class="text-categories">Hogar</p>
             </div>
-            <div class="category-content">
-              <img src="/gift-outline.svg" alt="" class="image-category" />
+            <div class="category-content last">
+              <img
+                src="/assets/gift-outline.svg"
+                alt=""
+                class="image-category"
+              />
               <p class="text-categories">Otros</p>
             </div>
           </div>
@@ -208,10 +210,10 @@
     </main>
     <footer>
       <div class="social-media">
-        <img src="/twitter.svg" alt="Logotipo" class="grupo1" />
-        <img src="/facebook.svg" alt="Logotipo" class="grupo1" />
-        <img src="/instagram.svg" alt="Logotipo" class="grupo1" />
-        <img src="/youtube.svg" alt="Logotipo" class="grupo1" />
+        <img src="/assets/twitter.svg" alt="Logotipo" class="grupo1" />
+        <img src="/assets/facebook.svg" alt="Logotipo" class="grupo1" />
+        <img src="/assets/instagram.svg" alt="Logotipo" class="grupo1" />
+        <img src="/assets/youtube.svg" alt="Logotipo" class="grupo1" />
       </div>
       <div class="derechos">
         <p class="Derechos">
@@ -219,9 +221,9 @@
         </p>
       </div>
       <div class="tiendas">
-        <img src="/Apple.svg" alt="Logotipo" class="grupo2" />
+        <img src="/assets/Apple.svg" alt="Logotipo" class="grupo2" />
         <p class="TextoFooter">App Store</p>
-        <img src="/Google-play.svg" alt="Logotipo" class="grupo2" />
+        <img src="/assets/Google-play.svg" alt="Logotipo" class="grupo2" />
         <p class="TextoFooter">Google Play</p>
       </div>
     </footer>
