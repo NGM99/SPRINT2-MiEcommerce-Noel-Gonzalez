@@ -15,27 +15,31 @@ app.set("views", "./views/pages");
 const mainRoute = require("./src/routes/mainRoute");
 const userRoute = require("./src/routes/userRoute");
 const productRoute = require("./src/routes/productRoute");
+const storeRoute = require("./src/routes/storeRoute");
+const cartRoute = require("./src/routes/cartRoute");
 
 // INDEX
 app.use("/", mainRoute);
 app.use("/users", userRoute);
 app.use("/products", productRoute);
+app.use("/stores", storeRoute);
+app.use("/cart", cartRoute);
 
-// PRODUCTS
-app.get("/products", (req, res) => {
-  res.render("product");
-});
-// PRODUCT/:ID
-app.get("/products/:productID", (req, res) => {
-  let productID = req.params.productID;
+// // PRODUCTS
+// app.get("/products", (req, res) => {
+//   res.render("product");
+// });
+// // PRODUCT/:ID
+// app.get("/products/:productID", (req, res) => {
+//   let productID = req.params.productID;
 
-  res.render("product_error.ejs", { productID });
-});
+//   res.render("product_error.ejs", { productID });
+// });
 
-// CART
-app.get("/cart", (req, res) => {
-  res.render("cart");
-});
+// // CART
+// app.get("/cart", (req, res) => {
+//   res.render("cart");
+// });
 
 // CHECKOUT
 app.get("/checkout", (req, res) => {
