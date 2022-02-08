@@ -14,11 +14,12 @@ app.set("view engine", "ejs");
 app.set("views", "./views/pages");
 const mainRoute = require("./src/routes/mainRoute");
 const userRoute = require("./src/routes/userRoute");
+const productRoute = require("./src/routes/productRoute");
 
 // INDEX
 app.use("/", mainRoute);
 app.use("/users", userRoute);
-// app.use("/products");
+app.use("/products", productRoute);
 
 // PRODUCTS
 app.get("/products", (req, res) => {
@@ -41,15 +42,6 @@ app.get("/checkout", (req, res) => {
   res.render("checkout");
 });
 
-// REGISTER
-app.get("/register", (req, res) => {
-  res.render("register");
-});
-
-// LOGIN
-app.get("/login", (req, res) => {
-  res.render("login");
-});
 //Servidor
 app.listen(PORT, () => {
   console.log("SERVIDOR CORRIENDO EN EL PUERTO 3000");
