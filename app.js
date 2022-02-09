@@ -5,8 +5,8 @@ const PORT = 3000 || process.env.PORT;
 
 // Configuración de public, src para todo el proyecto
 app.use(express.static("public"));
-app.use(express.static("assets"));
-app.use(express.static("src"));
+// app.use(express.static("assets"));
+// app.use(express.static("src"));
 app.use(express.urlencoded({ extended: false }));
 
 //Rutas
@@ -23,7 +23,7 @@ app.use("/", mainRoute);
 app.use("/users", userRoute);
 app.use("/products", productRoute);
 app.use("/stores", storeRoute);
-app.use("/cart", cartRoute);
+app.use("/", cartRoute);
 
 // // PRODUCTS
 // app.get("/products", (req, res) => {
