@@ -44,17 +44,35 @@ const Cart = {
       (product) => product.product === productId
     );
 
-    productoCarrito.qty--;
+    console.log(productoCarrito);
 
-    fs.writeFileSync(
-      path.resolve(__dirname, "..", "database", "cart.json"),
-      JSON.stringify(usuarios, null, 2)
-    );
+    if (productoCarrito.qty === 0) {
+      let productDeleteFromCart = usuarioCarrito.cart.find(
+        (product) => product.product !== productId
+      );
 
-    return usuarioCarrito.cart;
+      usuarioCarrito.cart.splice(0, usuarioCarrito.cart.length);
+      usuarioCarrito.cart.push(productDeleteFromCart);
+
+      fs.writeFileSync(
+        path.resolve(__dirname, "..", "database", "cart.json"),
+        JSON.stringify(usuarios, null, 2)
+      );
+
+      return usuarioCarrito.cart;
+    } else {
+      productoCarrito.qty--;
+
+      fs.writeFileSync(
+        path.resolve(__dirname, "..", "database", "cart.json"),
+        JSON.stringify(usuarios, null, 2)
+      );
+
+      return usuarioCarrito.cart;
+    }
   },
 };
 
-// Cart.addProduct(1, 1);
+// Cart.deleteProduct(1, 5);
 
 module.exports = Cart;
