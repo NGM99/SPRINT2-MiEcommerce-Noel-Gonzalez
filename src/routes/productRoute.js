@@ -9,7 +9,7 @@ router.get(
   "/api/products/:id/related",
   productController.findProductsRelatedById
 );
-router.get("/api/products/suggested", productController.findProductsSuggested);
+router.get("/api/product/suggested", productController.findProductsSuggested);
 router.get(
   "/api/products/mostWanted",
   productController.findProductsMostWanted

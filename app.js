@@ -42,8 +42,8 @@ app.use("/", cartRoute);
 // });
 
 // CHECKOUT
-app.get("/checkout", (req, res) => {
-  res.render("checkout");
+app.get("*", function (req, res) {
+  res.status(404).render("checkout");
 });
 
 //Servidor

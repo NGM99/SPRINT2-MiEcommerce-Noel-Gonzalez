@@ -128,6 +128,7 @@
 .lista-productos {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .contenedor-producto {
@@ -136,6 +137,7 @@
   background: rgba(255, 255, 255, 1);
   border-radius: 16px;
   padding: 8px;
+  margin-bottom: 16px;
   color: rgba(0, 0, 0, 1);
 }
 
