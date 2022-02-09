@@ -21,8 +21,8 @@ const cartRoute = require("./src/routes/cartRoute");
 // INDEX
 app.use("/", mainRoute);
 app.use("/users", userRoute);
-app.use("/products", productRoute);
-app.use("/stores", storeRoute);
+app.use("/", productRoute);
+app.use("/", storeRoute);
 app.use("/", cartRoute);
 
 // // PRODUCTS

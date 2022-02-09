@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 // let products = require("../database/products");
 const { response } = require("express");
+const ProductModel = require("../models/ProductModel");
 
 module.exports = {
   //            /products/api/product/                  //
@@ -11,7 +12,11 @@ module.exports = {
         return res.render("product", { productosSugeridos });
       });
   },
-  findProductById: (req, res) => {},
+  findProductById: async (req, res) => {
+    let idProduct = req.params.id;
+    const productToShow = await ProductModel.filterProductById(idProduct);
+    res.render("product", { productToShow });
+  },
 
   //        /api/products/:id             //
   findProductsRelatedById: (req, res) => {
@@ -39,7 +44,6 @@ module.exports = {
 
     // Código que trae los productos con valor True  //
     let trueSuggested = await data.filter((data) => data.mostwanted == true);
-    console.log(trueSuggested);
 
     trueSuggested = [
       trueSuggested[0],
