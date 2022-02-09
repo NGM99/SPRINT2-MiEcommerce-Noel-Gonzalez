@@ -25,22 +25,6 @@ app.use("/products", productRoute);
 app.use("/stores", storeRoute);
 app.use("/", cartRoute);
 
-// // PRODUCTS
-// app.get("/products", (req, res) => {
-//   res.render("product");
-// });
-// // PRODUCT/:ID
-// app.get("/products/:productID", (req, res) => {
-//   let productID = req.params.productID;
-
-//   res.render("product_error.ejs", { productID });
-// });
-
-// // CART
-// app.get("/cart", (req, res) => {
-//   res.render("cart");
-// });
-
 // CHECKOUT
 app.get("/checkout", (req, res) => {
   res.render("checkout");
