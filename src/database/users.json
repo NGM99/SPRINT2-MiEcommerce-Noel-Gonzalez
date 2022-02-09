@@ -5,8 +5,19 @@
   "password": "LeaveOneWolfAliveAndTheSheepAreNeverSafe"
  },
  {
+  "id": 2,
   "email": "fredd@gmail.com",
-  "contraseña": "$2a$10$RVpf3z25m1lqcFo.69bRSO0q46ebMWP8jbGe4QO6P.p1/VKvpit1O",
+  "password": "$2a$10$RVpf3z25m1lqcFo.69bRSO0q46ebMWP8jbGe4QO6P.p1/VKvpit1O"
+ },
+ {
+  "email": "alfre@gmail.com",
+  "password": "12345678",
+  "Repitepassword": "12345678",
+  "contraseña": "$2a$10$bT9XFq7iJlk7aOnfJ7G4cO4CTgDRehzkh8xbL2VY.Hilb.5gPbPwC"
+ },
+ {
+  "email": "alfredd@gmail.com",
+  "password": "$2a$10$8ctKIFDn./Pq2bmJd9Iu9ejc1NVi06FAQ6ZrWtqFqX//9n6lm839G",
   "Repitepassword": "123456789"
  }
 ]

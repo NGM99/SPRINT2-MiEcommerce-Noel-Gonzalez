@@ -17,18 +17,26 @@
         <div class="component-login">
           <div class="form">
             <p class="text-hola">¡Hola!</p>
-            <form action="" class="form-inputs">
+            <form method="POST" action="/users/login" class="form-inputs">
               <input
                 type="text"
                 class="username-input"
                 placeholder="Tu nombre de usuario"
+                name="email"
               />
+              <% if (locals.errors && errors.email ) {%>
+              <p class="texto-alerta"><%= errors.email.msg %></p>
+              <% } %>
               <input
                 type="password"
                 class="user-password"
                 placeholder="Tu contraseña"
+                name="password"
               />
-              <button class="button-login">Iniciar Sesión</button>
+              <% if (locals.errors && errors.password ) {%>
+              <p class="texto-alerta"><%= errors.password.msg %></p>
+              <% } %>
+              <button type="submit" class="button-login">Iniciar Sesión</button>
             </form>
           </div>
           <div class="text-no-cuenta">

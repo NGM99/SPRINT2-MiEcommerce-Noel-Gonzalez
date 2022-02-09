@@ -4,7 +4,7 @@ const app = express();
 const { check } = require("express-validator");
 
 let validarRegistro = [
-  check("contraseña")
+  check("password")
     .notEmpty()
     .withMessage("Tienes que escribir una contraseña")
     .isNumeric()

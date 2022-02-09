@@ -83,3 +83,9 @@
 .text-registrate {
   color: black;
 }
+
+.texto-alerta {
+  font-size: 14px;
+  color: red;
+  margin-top: -14px;
+}

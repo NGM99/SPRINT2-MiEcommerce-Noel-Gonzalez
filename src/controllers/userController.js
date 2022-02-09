@@ -1,3 +1,4 @@
+const express = require("express");
 const bcrypt = require("bcryptjs");
 const User = require("../../src/models/UserModel");
 const { validationResult } = require("express-validator");
@@ -15,7 +16,7 @@ module.exports = {
       });
     }
 
-    if (req.body.contraseña != req.body.Repitepassword) {
+    if (req.body.password != req.body.Repitepassword) {
       return res.render("register", {
         errors: { Repitepassword: { msg: "Las contraseñas no coinciden" } },
       });
@@ -23,7 +24,7 @@ module.exports = {
 
     let usuarioCreado = {
       ...req.body,
-      contraseña: bcrypt.hashSync(req.body.contraseña, 10),
+      password: bcrypt.hashSync(req.body.password, 10),
     };
 
     let usuarioExistente = User.filtrarCampo("email", req.body.email);
@@ -37,5 +38,36 @@ module.exports = {
 
     User.crearUsuario(usuarioCreado);
     res.send("usuario creado");
+  },
+
+  loginProceso: (req, res) => {
+    let errors = validationResult(req);
+
+    if (errors.isEmpty()) {
+      // res.send({ userNameLogin, body: req.body });
+      let userNameLogin = User.verificarEmail(req.body.email);
+      if (userNameLogin) {
+        let passCorrecta = bcrypt.compareSync(
+          req.body.password,
+
+          userNameLogin.password
+        );
+        if (passCorrecta) {
+          delete userNameLogin.password;
+          res.redirect("/");
+        }
+      }
+    } else {
+      return res.render("login", {
+        errors: {
+          email: {
+            msg: "Ingrese el Nombre de usuario",
+          },
+          password: {
+            msg: "Ingrese la contraseña",
+          },
+        },
+      });
+    }
   },
 };

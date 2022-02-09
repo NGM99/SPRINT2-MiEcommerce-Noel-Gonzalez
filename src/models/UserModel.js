@@ -27,6 +27,12 @@ const User = {
     fs.writeFileSync(this.fileName, JSON.stringify(usuarios, null, " "));
     return usuarios;
   },
+
+  verificarEmail: function (email) {
+    usuarios = this.LeerJson();
+    usuarioEncontrado = usuarios.find((user) => user.email === email);
+    return usuarioEncontrado;
+  },
 };
 
 //console.log(User.crearUsuario({"nombre": "luis"}))
