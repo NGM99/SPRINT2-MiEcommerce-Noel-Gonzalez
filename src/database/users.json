@@ -1,7 +1,12 @@
 [
-  {
-    "id": 1,
-    "email": "agirlhasnoname@digitalhouse.com",
-    "password": "LeaveOneWolfAliveAndTheSheepAreNeverSafe"
-  }
+ {
+  "id": 1,
+  "email": "agirlhasnoname@digitalhouse.com",
+  "password": "LeaveOneWolfAliveAndTheSheepAreNeverSafe"
+ },
+ {
+  "email": "fredd@gmail.com",
+  "contraseña": "$2a$10$RVpf3z25m1lqcFo.69bRSO0q46ebMWP8jbGe4QO6P.p1/VKvpit1O",
+  "Repitepassword": "123456789"
+ }
 ]

@@ -50,6 +50,7 @@
   display: flex;
   gap: 20px;
   flex-direction: column;
+  flex: 1 1 auto;
 }
 
 .user-password,
@@ -82,4 +83,25 @@
 
 .text-login {
   color: black;
+}
+
+.text-danger {
+  font-size: 10px;
+  top: 120px;
+  position: absolute;
+  right: 90px;
+}
+
+.text-dangerContraseña {
+  font-size: 10px;
+  top: 175px;
+  position: absolute;
+  right: 90px;
+}
+
+.text-dangerRContraseña {
+  font-size: 10px;
+  top: 228px;
+  position: absolute;
+  right: 90px;
 }

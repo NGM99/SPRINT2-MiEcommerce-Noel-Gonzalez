@@ -17,22 +17,43 @@
         <div class="component-login">
           <div class="form">
             <p class="text-hola">¡Registrate!</p>
-            <form action="" class="form-inputs">
+            <form action="/users/register" class="form-inputs" method="post">
               <input
                 type="text"
                 class="username-input"
                 placeholder="Tu email"
+                name="email"
               />
+              <% if (locals.errors && errors.email) { %>
+              <div class="text-danger" style="color: red">
+                <%= errors.email.msg %>
+              </div>
+              <% } %>
+
               <input
                 type="password"
                 class="user-password"
+                name="contraseña"
                 placeholder="Tu nueva contraseña"
               />
+              <% if (locals.errors && errors.contraseña) { %>
+              <div class="text-dangerContraseña" style="color: red">
+                <%= errors.contraseña.msg %>
+              </div>
+              <% } %>
+
               <input
                 type="password"
                 class="user-password"
                 placeholder="Repite tu contraseña"
+                name="Repitepassword"
               />
+
+              <% if (locals.errors && errors.Repitepassword) { %>
+              <div class="text-dangerRContraseña" style="color: red">
+                <%= errors.Repitepassword.msg %>
+              </div>
+              <% } %>
               <button class="button-register">Registrame</button>
             </form>
           </div>
