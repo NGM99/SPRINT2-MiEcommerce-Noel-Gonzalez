@@ -42,17 +42,27 @@ module.exports = {
   },
 
   //          /api/products/:id/related         //
-  findProductsRelatedById: (req, res) => {
+  findProductsRelatedById: async (req, res) => {
+    let productosSugeridos = [];
     let id = req.params.id;
-
-    fetch("https://dhfakestore.herokuapp.com/api/products/" + id)
-      .then((responde) => response.json())
-      .then((producto) => {
-        fetch("https://fakestoreapi.com/products/category/" + producto.category)
-          .then((response) => response.json())
-          .then((categoriaProducto) => {
-            return res.render("product", { categoriaProducto });
-          });
+    console.log(id);
+    let url =
+      "http://dhfakestore.herokuapp.com/api/products/" + id + "/related";
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        let productosRelacionados = [];
+        console.log(data);
+        for (let index = 0; index <= 4; index++) {
+          if (data.length > index) {
+            productosRelacionados.push(data[index]);
+          }
+        }
+        console.log(productosRelacionados);
+        return res.render("productRelated", {
+          productosRelacionados,
+          productosSugeridos,
+        });
       });
   },
   getAllProducts: async (req, res) => {
