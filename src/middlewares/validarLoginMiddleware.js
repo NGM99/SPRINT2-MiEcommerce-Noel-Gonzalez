@@ -1,7 +1,17 @@
+const express = require("express");
+const app = express();
+
 const { check } = require("express-validator");
 
-module.exports = [
-  check("email").notEmpty().isEmail(),
+let Validaciones = [
+  check("email")
+    .notEmpty()
+    .withMessage("Tienes que escribir un correo")
+    .bail()
+    .isEmail()
+    .withMessage("Escribe un email valido"),
 
   check("password").notEmpty(),
 ];
+
+module.exports = Validaciones;

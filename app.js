@@ -2,6 +2,7 @@
 const express = require("express");
 const app = express();
 const PORT = 3000 || process.env.PORT;
+const session = require("express-session");
 
 // Configuración de public, src para todo el proyecto
 app.use(express.static("public"));
@@ -12,6 +13,13 @@ app.use(express.urlencoded({ extended: false }));
 //Rutas
 app.set("view engine", "ejs");
 app.set("views", "./views/pages");
+app.use(
+  session({
+    secret: "shh, its a secrete",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 const mainRoute = require("./src/routes/mainRoute");
 const userRoute = require("./src/routes/userRoute");
 const productRoute = require("./src/routes/productRoute");
