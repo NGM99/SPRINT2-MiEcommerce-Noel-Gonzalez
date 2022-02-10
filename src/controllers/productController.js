@@ -4,7 +4,6 @@ const { response } = require("express");
 const ProductModel = require("../models/ProductModel");
 
 module.exports = {
-  //            /products/api/product/                  //
   findProducts: (req, res) => {
     fetch("https://dhfakestore.herokuapp.com/api/products")
       .then((response) => response.json())
@@ -12,28 +11,12 @@ module.exports = {
         return res.render("product", { productosSugeridos });
       });
   },
+
   findProductById: async (req, res) => {
     let idProduct = req.params.id;
     const productToShow = await ProductModel.filterProductById(idProduct);
     res.render("product", { productToShow });
   },
-
-  //        /api/products/:id             //
-  findProductsRelatedById: (req, res) => {
-    let id = req.params.id;
-
-    fetch("https://dhfakestore.herokuapp.com/api/products/" + id)
-      .then((response) => response.json())
-      .then((producto) => {
-        fetch("https://fakestoreapi.com/products/category/" + producto.category)
-          .then((response) => response.json())
-          .then((productosSugeridos) => {
-            return res.render("product", { productosSugeridos });
-          });
-      });
-  },
-
-  findProductById: (req, res) => {},
 
   //PRODUCTOS SUGERIDOS//              //url para esta función =>   /products/api/product/suggested
   findProductsSuggested: async (req, res) => {
