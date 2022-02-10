@@ -19,5 +19,20 @@
   "email": "alfredd@gmail.com",
   "password": "$2a$10$8ctKIFDn./Pq2bmJd9Iu9ejc1NVi06FAQ6ZrWtqFqX//9n6lm839G",
   "Repitepassword": "123456789"
+ },
+ {
+  "email": "alfredo@gmail.com",
+  "password": "$2a$10$UvoWH6XA95ST4nUNf6JnIuKFFtQyNfn9oBybFBomouG6Ba6T3AEfa",
+  "Repitepassword": "12345678"
+ },
+ {
+  "email": "alfredoR@gmail.com",
+  "password": "$2a$10$dDLud89QJ/U2KY1/gVh/7uybHwcxBCipwaZeGUsJDTv3f61Bzec2G",
+  "Repitepassword": "12345678"
+ },
+ {
+  "email": "1234r@gmail.com",
+  "password": "$2a$10$e7dZ54fzLPjvvQZGLIOLCOUJ.2pNhgEN.2PNGD8z99Upu9aVc6.uS",
+  "Repitepassword": "12345678"
  }
 ]
