@@ -14,5 +14,6 @@ router.get(
   "/api/products/mostWanted",
   productController.findProductsMostWanted
 );
+router.get("/products", productController.getAllProducts);
 
 module.exports = router;

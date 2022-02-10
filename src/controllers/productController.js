@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 // let products = require("../database/products");
 const { response } = require("express");
+const { includes } = require("../middlewares/validarLoginMiddleware");
 const ProductModel = require("../models/ProductModel");
 
 module.exports = {
@@ -53,6 +54,16 @@ module.exports = {
             return res.render("product", { categoriaProducto });
           });
       });
+  },
+  getAllProducts: async (req, res) => {
+    let url = "https://dhfakestore.herokuapp.com/api/products";
+    fetch(url);
+    let response = await fetch(url);
+    let data = await response.json();
+
+    return res.render("allProducts", {
+      data,
+    });
   },
   findProductsMostWanted: (req, res) => {},
 };
